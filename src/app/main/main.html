@@ -1,0 +1,30 @@
+<div class="container">
+  <div ng-if="vm.aadharSubmitted">
+    <span class="docStatus" ng-if="vm.signing">Signing...</span>
+    <span class="docStatus" ng-if="vm.signed">Signed</span>
+  </div>
+<!--   <div class="wrapper">
+    <h1>{{vm.pdfName}}</h1>
+    <ng-pdf template-url="../app/main/viewer.html" canvasid="pdf-canvas" scale="page-fit" page=13></ng-pdf>
+  </div> -->
+  <embed src="assets/pdf/Form.pdf" max-width="800px" height="600px" width="80%"/>
+  <button class="button btn-default btn-reqOtop">Request OTP to Sign</button>
+</div>
+
+<script type="text/ng-template" id="partials/modal.html">
+  <div class="modal-body">
+    <img class="aadhar__img" src="assets/images/aadhaar-logo.png" alt="aadhar image"/>
+    <input type="text" class="aadhar__input" id="aadharNumber" ng-model="vm.aadharNumber" name="aadharNumber" numbers-only>
+    <button type="button" class="button btn-default" ng-disabled="vm.aadharNumber.length !== 12" ng-click="submitAadharNumber(vm.aadharNumber)">Verify</button>
+    <div ng-if="aadharSubmited" class="mt10">
+      <label class="mt10 block">
+        <input type="checkbox" ng-model="checkboxModel.value2">
+        I agree to eSign this KYC document to get starte
+      </label>
+      <div class="t-center">
+        <input type="text" class="aadhar__OTP mt10" id="aadharOtp" placeholder="OTP" ng-model="vm.aadharOtp" name="aadharOtp" numbers-only>
+        <button type="button" class="button btn-default" ng-disabled="vm.aadharOtp.length !== 6 && vm.aadharOtp" ng-click="submitaadharOtp(vm.aadharOtp)">Submit</button>
+      </div>
+    </div>
+  </div>
+</script>

@@ -1,0 +1,140 @@
+h1 {
+	font-size: 30px;
+}
+
+.loginForm {
+  width: 90%;
+  max-width: 370px;
+  margin: 40px auto 0px;
+  text-align: center;
+  border: 1px solid gray;
+  padding: 60px 50px;
+  font-weight: 300;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+
+.button {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+
+.button:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+.button--google {
+  background: #DD4B39;
+}
+
+.button--google:hover,
+.button--google:focus {
+  background: #E74B37;
+}
+
+.email__input {
+	display: block;
+	width: 100%;
+	padding: 4px;
+}
+
+.button--email {
+  background: #54577d;
+  margin: 0px auto;
+}
+
+.btn-default {
+  background: #54577d;	
+}
+
+.button--email:hover,
+.button--email:focus {
+  background: #292c54;
+}
+
+
+.login__line {
+	 width:100%; text-align:center; border-bottom: 1px solid #000; line-height:0.1em; margin:10px 0 20px;
+}
+
+.aadhar__img {
+	width: 60px;
+  vertical-align: bottom;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.aadhar__input {
+  padding: 4px;
+  width: 309px;
+  height: 37px; 
+}
+
+.aadhar__OTP {
+  padding: 4px;
+  width: 100px;
+  height: 37px;  
+}
+
+.t-center {
+  text-align: center;
+}
+
+.docStatus {
+  font-size: 33px;
+  margin-top: 20px;
+  display: block;
+}
+
+.btn-reqOtop {
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  left: calc(50% - 100px);
+  width: 200px;
+  padding: 5px 20px;
+}
+
+embed {
+  margin: 0px auto;
+  display: block;
+}

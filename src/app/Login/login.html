@@ -1,0 +1,16 @@
+<div class="loginForm">
+	<h1 class="hidden">Login</h1>
+	<p>Google account? Proceed with</p>
+	<button class="button button--google">Google</button>
+
+	<p><strong>Tip:</strong> If using multiple Gmail accounts, select the account shown above</p>
+	<span class="login__line">Or</span>
+	<form name="loginForm">
+		<label class="hidden" for="Email">Email</label>
+		<input class="email__input mt10" type="email" id="Email" name="email" ng-model="Login.emailId" placeholder="email@xyz.com" required></input>
+	  <span class="error" ng-show="loginForm.email.$error.email">Not valid email!</span>
+		<p class="mt10">By continuing, I confirm to the Terms of Service and Privacy Policy of<a href="https://digio.in" target="_blank">digio.in</a></p>
+		<button class="block button button--email mt10" type="submit" ng-disabled="loginForm.$invalid" ng-click="Login.submitLogin(Login.emailId)">Continue</button>
+	</form>
+
+</div>
